@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Genres</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='gen_styles.css') }}">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/genre">Categories</a>
+            <a href="#">My Playlist</a>
+            <a href="add_music">Add Music</a>
+        </nav>
+    </header>
+    <div class="main-container">
+    <div class="container">
+        <h1 class="title">Explore Music Genres</h1>
+        <div class="genres-grid">
+            <a href="/genre/hiphop" class="genre-card hiphop">
+                <h2>Hip-Hop</h2>
+            </a>
+            <a href="/genre/jazz" class="genre-card jazz">
+                <h2>Jazz</h2>
+            </a>
+            <a href="/genre/disco" class="genre-card disco">
+                <h2>Disco</h2>
+            </a>
+            <a href="/genre/reggae" class="genre-card reggae">
+                <h2>Reggae</h2>
+            </a>
+            <a href="/genre/country" class="genre-card country">
+                <h2>Country</h2>
+            </a>
+            <a href="/genre/blues" class="genre-card blues">
+                <h2>Blues</h2>
+            </a>
+            <a href="/genre/rock" class="genre-card rock">
+                <h2>Rock</h2>
+            </a>
+            <a href="/genre/metal" class="genre-card metal">
+                <h2>Metal</h2>
+            </a>
+            <a href="/genre/pop" class="genre-card pop">
+                <h2>Pop</h2>
+            </a>
+            <a href="/genre/classical" class="genre-card classical">
+                <h2>Classical</h2>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

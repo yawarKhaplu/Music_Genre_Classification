@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Categories</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='category_styles.css')}}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel=" stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/category">Categories</a>
+            <a href="#">My Playlist</a>
+            <a href="add_music">Add Music</a>
+        </nav>
+    </header>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Explore Music Genres</h1>
+    <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="category-card hiphop">
+                <h2>Hip Hop</h2>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="category-card jazz">
+                <h2>Jazz</h2>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="category-card disco">
+                <h2>Disco</h2>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="category-card reggae">
+                <h2>Reggae</h2>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="category-card country">
+                <h2>Country</h2>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="category-card blues">
+                <h2>Blues</h2>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="category-card rock">
+                <h2>Rock</h2>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="category-card metal">
+                <h2>Metal</h2>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="category-card pop">
+                <h2>Pop</h2>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="category-card classical">
+                <h2>Classical</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Our Music App. All rights reserved.</p>
+    <p>Contact us: TEAMBEATA@ITSOLERA.COM</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

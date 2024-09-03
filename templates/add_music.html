@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='add_music_styles.css')}}">
+    <script>
+        window.musicUrls = {
+            song1: "{{ url_for('static', filename='music/song1.wav') }}",
+            song2: "{{ url_for('static', filename='music/song2.mp3') }}",
+            song3: "{{ url_for('static', filename='music/song3.mp3') }}"
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/category">Categories</a>
+            <a href="#">My Playlist</a>
+            <a href="/add_music">Add Music</a>
+        </nav>
+    </header>
+    <!-- Add this in your HTML file -->
+<div id="loading-spinner" class="spinner" style="display: none;"></div>
+
+    <div class="container">
+        <h1>Music Player</h1>
+    
+        <div class="music-section">
+            <h2>Add Music</h2>
+            <form id="upload-form" action="{{url_for('add_music')}}" method="POST" enctype="multipart/form-data">
+                <div class="file-upload">
+                    <input type="file" id="file-input" name="music_file" accept="audio/*" multiple>
+                    <label for="file-input">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <span>Drag & Drop your music files here or click to upload</span>
+                    </label>
+                </div>
+                <button type="submit" id="upload-button">Upload Music</button>
+            </form>
+            <div id="file-list">
+                <!-- List of uploaded files will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Our Music App. All rights reserved.</p>
+        <p>Contact us: teambeta@ITSOLERA.com</p>
+    </footer>
+    <script src="{{ url_for('static', filename='add_music_script.js') }}"></script>
+</body>
+</html>

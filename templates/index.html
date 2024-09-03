@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/genre">Categories</a>
+            <a href="#">My Playlist</a>
+            <a href="/add_music">Add Music</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="categories">
+            <h2>Music Categories</h2>
+            <!-- Genre buttons or list here -->
+        </section>
+        <section class="recent-music">
+            <h2>Recently Uploaded Music</h2>
+            <div id="recent-music-list">
+                {% for upload in recent_uploads %}
+                    <div class="music-item">
+                        <p>{{ upload.filename }} &nbsp;&nbsp;&nbsp; belongs to {{ upload.genre }} Genre</p>
+                        <audio controls>
+                            <source src="{{ url_for('static', filename=upload.filepath) }}" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+        
+        <section class="music-player">
+            <h2>Now Playing</h2>
+            <audio id="audio-player" controls>
+                <source id="audio-source" src="{{ url_for('static', filename='music/song1.wav') }}" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="player-controls">
+                <button id="prev">Prev</button>
+                <button id="play">Play</button>
+                <button id="next">Next</button>
+            </div>
+            <div class="track-info">
+                <!-- Information about the currently playing track -->
+            </div>
+        </section>
+        
+        <section class="add-music">
+            <h2>Add Music</h2>
+            <form id="upload-form">
+                <input type="file" id="music-file" accept="audio/*">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2024 Our Music App. All rights reserved.</p>
+        <p>Contact us: TEAMBEATA@ITSOLERA.COM</p>
+    </footer>
+    <script>
+        window.musicUrls = {
+            song1: "{{ url_for('static', filename='music/song1.wav') }}",
+            song2: "{{ url_for('static', filename='music/song2.mp3') }}",
+            song3: "{{ url_for('static', filename='music/song3.mp3') }}"
+        };
+    </script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='add_music_script.js') }}"></script>
+
+     
+</body>
+</html>

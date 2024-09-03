@@ -1,0 +1,49 @@
+body {
+    background-color: #121212;
+    color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.category-card {
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.category-card h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.hiphop { background-color: #FF5722; }
+.jazz { background-color: #9C27B0; }
+.disco { background-color: #E91E63; }
+.reggae { background-color: #4CAF50; }
+.country { background-color: #FFC107; }
+.blues { background-color: #03A9F4; }
+.rock { background-color: #f44336; }
+.metal { background-color: #607D8B; }
+.pop { background-color: #673AB7; }
+.classical { background-color: #FFEB3B; }
