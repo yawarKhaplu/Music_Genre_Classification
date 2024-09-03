@@ -13,7 +13,6 @@ This project is a web application that classifies music into different genres us
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
@@ -28,7 +27,9 @@ Music Genre Classification is a project that aims to classify audio files into d
 
 ## Demo
 
-Add a link to a live demo here (if available), or include a GIF or screenshot of the working application.
+![image](https://github.com/user-attachments/assets/3213ef8d-2db5-447d-8f1d-d1297f61ebc7)
+![image](https://github.com/user-attachments/assets/8d4c4c5e-f94b-43d0-810f-1e5e9b6c5652)
+
 
 ## Technologies Used
 
@@ -113,15 +114,9 @@ Music_Genre_Classification/
 
 Contributions are welcome! If you have any suggestions or improvements, feel free to submit a pull request or open an issue.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
 - This project was inspired by the growing need for automated music genre classification.
 - Thanks to [Kaggle](https://www.kaggle.com/) for the dataset used in training the model.
 
----
-
-This `README.md` provides a comprehensive overview of your project and should help others understand, use, and contribute to it. Make sure to replace placeholders like `yourusername` with your actual GitHub username and customize any other details to reflect your project accurately.
